@@ -10,13 +10,11 @@ import "./styles.scss";
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Switch>
-        <PrivateRoute path='/colors' component={BubblePage} />
-        <Route exact path="/" component={Login} />
-        </Switch>
-      </div>
-    </Router>
+    <div className="App">
+      <Route exact path="/" component={Login} />
+      <PrivateRoute path='/bubbles' component={BubblePage} />
+    </div>
+  </Router>
   );
 }
 
